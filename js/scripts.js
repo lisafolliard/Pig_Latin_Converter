@@ -21,10 +21,15 @@ var pigLatin = function(word) {
 };
 
 
+$(document).ready(function() {
+  $("form#pig-latin").submit(function(event) {
+    var word = ($("input#word").val());
+    var new_word = pigLatin(word);
 
+    $(".new_word").text(new_word);
 
-  //   new_word = word.split()
-  //   new_string = new_word.push("ay").join("")
-  // }
-  // return new_string;
-// };
+    $("#result").show();
+    event.preventDefault();
+
+  });
+});
