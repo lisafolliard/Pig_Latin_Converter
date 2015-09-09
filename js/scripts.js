@@ -1,4 +1,19 @@
-var pigLatin = function(word) {
+var sentencePigLatin = function(sentence) {
+  var silly_sentence = [];
+  var silly_word = "";
+
+  var new_sentence = sentence.split(" ");
+  new_sentence.forEach(function(item) {
+    silly_word = wordPigLatin(item);
+    silly_sentence.push(silly_word);
+  });
+    return silly_sentence.join(' ');
+};
+
+
+
+
+var wordPigLatin = function(word) {
   var vowels = ["a", "e", "i", "o", "u"];
 
   var first_letter = word.charAt(0);
@@ -24,7 +39,7 @@ var pigLatin = function(word) {
 $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
     var word = ($("input#word").val());
-    var new_word = pigLatin(word);
+    var new_word = wordPigLatin(word);
 
     $(".new_word").text(new_word);
 

@@ -1,13 +1,19 @@
-describe('pigLatin', function() {
+describe('wordPigLatin', function() {
   it('add "ay" to the end of a word that starts with a vowel', function() {
-    expect(pigLatin("apple")).to.equal("appleay");
+    expect(wordPigLatin("apple")).to.equal("appleay");
   });
 
   it('will move the first two consonants to the end and add "ay"', function() {
-    expect(pigLatin("crater")).to.equal("atercray");
+    expect(wordPigLatin("crater")).to.equal("atercray");
   });
 
   it('will move the consonant to the end and add "ay"', function() {
-    expect(pigLatin("peach")).to.equal("eachpay");
+    expect(wordPigLatin("peach")).to.equal("eachpay");
+  });
+});
+
+describe('sentencePigLatin', function() {
+  it('take the first word of a sentence and add "ay"', function() {
+    expect(sentencePigLatin('igloos are cozy')).to.equal('igloosay areay ozycay')
   });
 });
