@@ -3,17 +3,17 @@ describe('wordPigLatin', function() {
     expect(wordPigLatin("apple")).to.equal("appleay");
   });
 
-  it('will move the first two consonants to the end of a word and then add "ay"', function() {
-    expect(wordPigLatin("crater")).to.equal("atercray");
+  it('will move the first consonant to the end of a word and then add "ay"', function() {
+    expect(wordPigLatin("peach")).to.equal("eachpay");
   });
 
-  it('will move the consonant to the end of a word and then add "ay"', function() {
-    expect(wordPigLatin("peach")).to.equal("eachpay");
+  it('will move the first two consonants to the end of a word and then add "ay"', function() {
+    expect(wordPigLatin("crater")).to.equal("atercray");
   });
 });
 
 describe('sentencePigLatin', function() {
-  it('take the first word of a sentence and add "ay"', function() {
-    expect(sentencePigLatin('candy pop')).to.equal('andy popcay')
+  it('take each word in a sentence and apply Pig Latin', function() {
+    expect(sentencePigLatin('candy pop')).to.equal('andycay oppay')
   });
 });

@@ -1,17 +1,3 @@
-var sentencePigLatin = function(sentence) {
-  var silly_sentence = [];
-  var silly_word = "";
-
-  var new_sentence = sentence.split(" ");
-  new_sentence.forEach(function(item) {
-    silly_word = wordPigLatin(item);
-    silly_sentence.push(silly_word);
-  });
-    return silly_sentence.join(' ');
-};
-
-
-
 
 var wordPigLatin = function(word) {
   var vowels = ["a", "e", "i", "o", "u"];
@@ -33,6 +19,19 @@ var wordPigLatin = function(word) {
     var new_word = word.substr(1).concat(letter).concat("ay");
     return new_word;
   }
+};
+
+
+var sentencePigLatin = function(sentence) {
+  var silly_sentence = [];
+  var silly_word = "";
+
+  var new_sentence = sentence.split(" ");
+  new_sentence.forEach(function(item) {
+    silly_word = wordPigLatin(item);
+    silly_sentence.push(silly_word);
+  });
+    return silly_sentence.join(' ');
 };
 
 
