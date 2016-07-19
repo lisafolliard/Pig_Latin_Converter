@@ -24,7 +24,7 @@ Clone this repository to your local system, navigate into project folder, run in
 
 ### Legal
 
-Copyright (c) 2015 **Lisa Folliard, Janice Dunn**
+Copyright (c) 2015 Lisa Folliard, Janice Dunn
 
 This software is licensed under the MIT license.
 
