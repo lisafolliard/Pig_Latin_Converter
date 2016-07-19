@@ -1,4 +1,4 @@
-# Pig Latin converter
+# Pig Latin Converter
 
 #### September 9, 2015
 
